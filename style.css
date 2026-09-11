@@ -1,0 +1,591 @@
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f5f0;
+    color: #171717;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(247, 245, 240, 0.92);
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #dedbd3;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span,
+.footer-logo span {
+    color: #b08d57;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #b08d57;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 90vh;
+    padding: 80px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+
+    background:
+        radial-gradient(circle at 80% 20%, #e8dfd0 0%, transparent 30%),
+        #f7f5f0;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-heading,
+.section-label {
+    color: #b08d57;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #b08d57;
+}
+
+.hero h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.intro {
+    color: #666;
+    max-width: 560px;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #171717;
+    color: white;
+}
+
+.primary:hover {
+    background: #b08d57;
+    transform: translateY(-3px);
+}
+
+.secondary {
+    border: 1px solid #171717;
+    color: #171717;
+}
+
+.secondary:hover {
+    background: #171717;
+    color: white;
+}
+
+
+/* ================================
+   HERO CARD
+================================ */
+
+.hero-card {
+    width: 340px;
+    height: 400px;
+
+    background: #171717;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 25px 25px 0 #b08d57;
+
+    text-align: center;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    border: 2px solid #b08d57;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    color: #b08d57;
+
+    margin-bottom: 30px;
+}
+
+.hero-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+}
+
+.hero-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* ================================
+   COMMON SECTIONS
+================================ */
+
+.section {
+    padding: 110px 10%;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 55px;
+    margin-bottom: 50px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.about-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-info {
+    border-left: 2px solid #b08d57;
+    padding-left: 30px;
+}
+
+.about-info div {
+    margin-bottom: 25px;
+}
+
+.about-info span {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-info strong {
+    font-size: 20px;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+.dark-section {
+    background: #171717;
+    color: white;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 35px 25px;
+    border: 1px solid #444;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: #b08d57;
+}
+
+.skill-number {
+    color: #b08d57;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.skill-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 40px 30px;
+    border: 1px solid #e2dfd7;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.project-icon {
+    color: #b08d57;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.project-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.project-card span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #b08d57;
+}
+
+
+/* ================================
+   HOBBIES
+================================ */
+
+.hobbies-section {
+    padding: 110px 10%;
+    background: #e9e3d8;
+}
+
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.hobby {
+    background: #f7f5f0;
+    padding: 40px 30px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.hobby:hover {
+    transform: translateY(-6px);
+}
+
+.hobby-symbol {
+    font-size: 38px;
+    color: #b08d57;
+    margin-bottom: 15px;
+}
+
+.hobby h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.hobby p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-text {
+    color: #666;
+    margin-top: -25px;
+    margin-bottom: 50px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    width: 300px;
+    padding: 35px;
+    background: white;
+    border: 1px solid #e2dfd7;
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    border-color: #b08d57;
+}
+
+.contact-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #171717;
+    color: #b08d57;
+
+    font-size: 22px;
+}
+
+.contact-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-card a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact-card a:hover {
+    color: #b08d57;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #111;
+    color: white;
+    padding: 45px 10%;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #888;
+    font-size: 13px;
+    margin: 5px;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-card {
+        width: 280px;
+        height: 340px;
+        box-shadow: 15px 15px 0 #b08d57;
+    }
+
+    .section,
+    .hobbies-section {
+        padding: 80px 6%;
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+
+    .skills-container,
+    .hobbies {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info {
+        margin-top: 20px;
+    }
+}
